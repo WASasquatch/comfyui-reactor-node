@@ -1,5 +1,6 @@
 import copy
 import os
+import re
 from pathlib import Path
 
 import cv2
@@ -16,6 +17,7 @@ from facelib.detection.yolov5face.utils.general import (
     scale_coords,
     scale_coords_landmarks,
 )
+
 
 IS_HIGH_VERSION = tuple(map(int, torch.__version__.split('+')[0].split('.'))) >= (1, 9, 0)
 
